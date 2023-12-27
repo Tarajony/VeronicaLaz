@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdd5e0; /* рожевий фон */
+            color: #333;
+        }
+
+        header {
+            background-color: #ec407a; /* рожевий колір */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e91e63; /* темно-рожевий колір */
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #c2185b; /* темно-рожевий колір при наведенні */
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #ec407a; /* рожевий колір */
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #e91e63; /* темно-рожевий колір */
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+    <title>Сайт Вероніки</title>
+    <script>
+        function showPage(pageId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            var selectedSection = document.getElementById(pageId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Вероніка Лазорищак</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('about')">Про себе</a>
+        <a href="#" onclick="showPage('hobbies')">Хобі</a>
+        <a href="#" onclick="showPage('contacts')">Контакти</a>
+    </nav>
+
+    <section id="about" class="active">
+        <h2>Про себе</h2>
+        <p>Привіт, я Вероніка! Мені 10 років, і я старанна дівчинка. У школі вчусь добре, завжди стараюся допомагати однокласникам і завжди готова до нових викликів. Я люблю креативність і маю багато хобі, але найбільше я ціную малювання. Воно для мене не просто хобі, а справжній світ казки, де я можу створювати свої власні історії та світи.</p>
+    <img src="Smile.jpg" alt="" style="height: 500px;">
+    </section>
+
+    <section id="hobbies">
+        <h2>Хобі</h2>
+        <p>Малювання - це моє улюблене хобі. Я люблю творити світлинки, які розповідають різні історії. Мої образи можуть бути веселими та казковими або поважними і серйозними. Кожен раз, коли беру в руки олівець, я відчуваю, що створюю щось особливе.
+Я вчусь сама, експериментуючи з різними техніками та стилями. Мої малюнки - це моя історія, моя уява перетворюється на красиві образи на папері. Я відчуваю велику радість, вкладаючи свої емоції та думки у кожну мить творчості. Але є одна проблема, на жаль, я не можу розказати всім про свої художні навички.
+Тому мета цього сайту - поділитися цим світом краси та фантазії з іншими людьми. Це надзвичайно мені допоможе для того, щоб вони побачили мій талант. Я вірю, що мої малюнки можуть донести радість та натхнення іншим людям. Це не лише моє хобі, але й спосіб виразити себе та подарувати трошки магії тим, хто бачить мої творіння.
+Ось декілька моїх малюнків:</p>
+    <img src="London.jpg" alt="" style="height: 500px;"> <img src="SpiderMan.jpg" alt="" style="height: 500px;"> <img src="Billy.jpg" alt="" style="height: 500px;">
+    </section>
+
+    <section id="contacts">
+        <h2>Контакти</h2>
+        <p>Буду рада новим друзям! Долучайтесь до мене на <a href="https://www.instagram.com/veronika_lazoryshchak?igsh=YWYwM2I1ZDdmOQ==" target="_blank">Instagram</a>, де я ділюся своїми творіннями та веселими моментами життя!</p>
+    </section>
+
+   
+
+</body>
+</html>
